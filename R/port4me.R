@@ -109,6 +109,22 @@ port4me_skip <- function() {
   skip
 }
 
+port4me_list <- function() {
+  list <- Sys.getenv("PORT4ME_LIST", NA_character_)
+  if (is.na(list)) return(NULL)
+  list <- as.integer(list)
+  stopifnot(!is.na(list))
+  list
+}
+
+port4me_test <- function() {
+  test <- Sys.getenv("PORT4ME_TEST", NA_character_)
+  if (is.na(test)) return(NULL)
+  test <- as.integer(test)
+  stopifnot(!is.na(test))
+  test
+}
+
 
 #' Gets a Personalized TCP Port that can be Opened by the User
 #'
@@ -156,6 +172,8 @@ port4me <- function(tool = NULL, user = NULL, prepend = NULL, include = NULL, ex
   if (is.null(include)) include <- port4me_include()
   if (is.null(exclude)) exclude <- port4me_exclude()
   if (is.null(skip)) skip <- port4me_skip()
+  if (is.null(list)) list <- port4me_list()
+  if (is.null(test)) test <- port4me_test()
   
   stopifnot(is.null(tool) || is.character(tool), !anyNA(tool))
   stopifnot(length(user) == 1L, is.character(user), !is.na(user))
@@ -166,6 +184,8 @@ port4me <- function(tool = NULL, user = NULL, prepend = NULL, include = NULL, ex
   max_tries <- as.integer(max_tries)
   if (is.character(prepend)) prepend <- parse_ports(prepend)
   stopifnot(is.numeric(prepend), !anyNA(prepend), all(prepend > 0), all(prepend <= 65535))
+  prepend <- as.integer(prepend)
+  stopifnot(is.integer(prepend), !anyNA(prepend), all(prepend > 0), all(prepend <= 65535))
   if (is.character(exclude)) exclude <- parse_ports(exclude)
   stopifnot(is.numeric(exclude), !anyNA(exclude), all(exclude > 0), all(exclude <= 65535))
   if (is.character(include)) include <- parse_ports(include)
@@ -224,3 +244,4 @@ port4me <- function(tool = NULL, user = NULL, prepend = NULL, include = NULL, ex
 
   -1L
 }
+class(port4me) <- c("cli_function", class(port4me))
