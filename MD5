@@ -1,7 +1,7 @@
-b4d3b2c0d3fe2b7d9dda55e7a5b2ce49 *DESCRIPTION
+e576948c2f71feec464c876c8cdeb433 *DESCRIPTION
 94071f3da1e4f2d274e6261cd06c4678 *LICENSE
 323a7ff8d4aff8e4235983d150b0b3ef *NAMESPACE
-a6ee6f048b5b53e0a2d0d0eec0ea0208 *NEWS.md
+c67c1e093a9a918f2dcd9b47f57e2065 *NEWS.md
 a86ae562245b0a9ee392186e21feeed5 *R/cli.R
 b45851519c2fcec03592ecb99ac9a4d9 *R/is_tcp_port_available.R
 a01d247e3d8868a76ce09e2284fc386b *R/lcg.R
@@ -10,7 +10,7 @@ a01d247e3d8868a76ce09e2284fc386b *R/lcg.R
 cb6e4b1bc06da1cd259778738bc8c1e2 *R/string_to_uint.R
 d93e09a4e3bfedaa072d88c38ce5e02e *R/zzz.R
 3d20c07fd5b3090d4d4034b1e17028eb *README.md
-19315620fc964e9245c4d96958cb3842 *build/vignette.rds
+2d9ca992fda6fe4d21ccd864ac82bd87 *build/vignette.rds
 29427913de9ed1223c4c0aaed62d561a *inst/WORDLIST
 bb5e6b799c3421f8285af7ecc9274b4a *inst/doc/port4me-overview.R
 6dac1566a655e86e74686cab4d1045a8 *inst/doc/port4me-overview.Rmd
@@ -20,7 +20,7 @@ ebb85d781e1900aeebb5b7cc64cd21f6 *man/port4me.settings.Rd
 7d45dd4fb3155355e4c3f489d23d2263 *src/000.api.h
 b01e829e4d893c786d8b1d10d87f37a4 *src/000.init.c
 bc3b924650b8c7d25c52e04501f52190 *src/Makevars.win
-01866a70528c1507d747206b496a3d92 *src/test_tcp_port.c
+7c1cdd92320c621f0be274cb07bd4615 *src/test_tcp_port.c
 e0e53394f28c7bec3466d330d057a4c0 *tests/cli.R
 8cae67fffdd50065d3f3b22d8593d1a9 *tests/incl/ports.sh
 f531b96189df2acf100f078a4b4c438e *tests/lcg-uniformity.R
